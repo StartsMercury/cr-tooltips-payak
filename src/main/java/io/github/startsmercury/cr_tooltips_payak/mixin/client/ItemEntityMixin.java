@@ -39,14 +39,12 @@ public class ItemEntityMixin {
         final @Local(ordinal = 0, argsOnly = true) Player player
     ) {
         if (player != InGame.getLocalPlayer()) {
-            System.out.println("1");
             return original.call(instance, i);
         }
 
         var itemStack = UI.hotbar.getSelectedItemStack();
 
         if (!original.call(instance, i)) {
-            System.out.println("2");
             return false;
         }
 
