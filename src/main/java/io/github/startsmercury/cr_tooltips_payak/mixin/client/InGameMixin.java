@@ -3,7 +3,6 @@ package io.github.startsmercury.cr_tooltips_payak.mixin.client;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.llamalad7.mixinextras.sugar.Local;
-import finalforeach.cosmicreach.ClientWorldLoader;
 import finalforeach.cosmicreach.gamestates.GameState;
 import finalforeach.cosmicreach.gamestates.InGame;
 import finalforeach.cosmicreach.items.screens.ItemStorageScreen;
@@ -126,13 +125,18 @@ public class InGameMixin extends GameState implements InGameExtension {
         this.tooltipRemainingSeconds = Math.min(0.0F, this.tooltipRemainingSeconds);
     }
 
-    @Inject(method = "update(F)V", at = @At("TAIL"))
+    @Inject(
+        method = "update(F)V",
+        at = @At(
+            value = "FIELD",
+            target = "Lfinalforeach/cosmicreach/world/World;currentWorldTick:J",
+            ordinal = 0
+        )
+    )
     private void updateTooltipData(
         final CallbackInfo callback,
         final @Local(ordinal = 0, argsOnly = true) float delta
     ) {
-        if (ClientWorldLoader.INSTANCE.isReadyToPlay()) {
-            this.tooltipRemainingSeconds -= delta;
-        }
+        this.tooltipRemainingSeconds -= delta;
     }
 }
