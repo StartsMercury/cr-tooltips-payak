@@ -1,0 +1,44 @@
+{
+    "schema_version": 1,
+
+    "quilt_loader": {
+        "group": "${group}",
+        "id": "${modid}",
+        "version": "${version}",
+
+        "intermediate_mappings" : "net.fabricmc:intermediary",
+
+        "metadata": {
+            "name": "${display_name}",
+            "description": "Extends tooltips into item catalog and hotbar.",
+            "contributors": {
+                "StartsMercury": "Author"
+            },
+
+            "contact": {
+                "issues": "https://github.com/StartsMercury/cr-tooltips-payak/issues",
+                "sources": "https://github.com/StartsMercury/cr-tooltips-payak"
+            },
+
+            "icon": {
+                "128": "assets/cr-tooltips-payak/icons/logox128.png"
+            }
+        },
+
+        "entrypoints": {
+        },
+
+        "depends": [
+            {
+                "id": "cosmicreach",
+                "versions": "*"
+            },
+            {
+                "id": "cosmicquilt",
+                "version": "*"
+            }
+        ]
+    },
+
+    "mixin": "cr-tooltips-payak.mixins.json"
+}

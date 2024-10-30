@@ -1,0 +1,16 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "io.github.startsmercury.cr_tooltips_payak.mixin.client",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [],
+    "client": [
+        "InGameMixin",
+        "ItemCatalogMixin",
+        "ItemEntityMixin",
+        "UIMixin"
+    ],
+    "injectors": {
+    "defaultRequire": 1
+    }
+}
