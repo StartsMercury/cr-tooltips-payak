@@ -8,7 +8,7 @@ object Constants {
 
     const val DISPLAY_NAME = "CR Tooltips Payák"
 
-    const val VERSION_COSMIC_REACH = "0.3.3"
+    const val VERSION_COSMIC_REACH = "0.3.4"
     const val VERSION_JAVA = "17"
 }
 
