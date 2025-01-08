@@ -7,6 +7,7 @@ import finalforeach.cosmicreach.gamestates.GameState;
 import finalforeach.cosmicreach.gamestates.InGame;
 import finalforeach.cosmicreach.items.screens.ItemStorageScreen;
 import finalforeach.cosmicreach.ui.FontRenderer;
+import finalforeach.cosmicreach.ui.GameStyles;
 import finalforeach.cosmicreach.ui.UI;
 import io.github.startsmercury.cr_tooltips_payak.impl.client.InGameExtension;
 import org.spongepowered.asm.mixin.Mixin;
@@ -36,7 +37,7 @@ public class InGameMixin extends GameState implements InGameExtension {
     private String lastTooltipName = "";
 
     @Shadow
-    Vector2 tmpVec;
+    private Vector2 tmpVec;
 
     @Unique
     private float tooltipRemainingSeconds;
@@ -82,10 +83,10 @@ public class InGameMixin extends GameState implements InGameExtension {
         GameState.batch.begin();
 
         {
-            final var color = UI.containerBackground9Patch.getColor();
+            final var color = GameStyles.containerBackground9Patch.getColor();
             final var oldOpacity = color.a;
             color.a = opacity;
-            UI.containerBackground9Patch.draw(
+            GameStyles.containerBackground9Patch.draw(
                 GameState.batch,
                 xStart - 4.0F,
                 yStart - 4.0F,

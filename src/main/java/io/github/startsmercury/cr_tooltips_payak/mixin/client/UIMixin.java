@@ -9,6 +9,7 @@ import com.llamalad7.mixinextras.sugar.ref.LocalBooleanRef;
 import finalforeach.cosmicreach.gamestates.GameState;
 import finalforeach.cosmicreach.items.Hotbar;
 import finalforeach.cosmicreach.ui.FontRenderer;
+import finalforeach.cosmicreach.ui.GameStyles;
 import finalforeach.cosmicreach.ui.UI;
 import io.github.startsmercury.cr_tooltips_payak.impl.client.InGameExtension;
 import io.github.startsmercury.cr_tooltips_payak.impl.client.ItemCatalogExtension;
@@ -109,7 +110,7 @@ public class UIMixin {
 
         // Tooltip Drawing
         UI.batch.begin();
-        UI.containerBackground9Patch.draw(
+        GameStyles.containerBackground9Patch.draw(
             UI.batch,
             textX - TOOLTIP_PADDING,
             textY - TOOLTIP_PADDING,
