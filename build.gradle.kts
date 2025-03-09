@@ -4,7 +4,7 @@ import dev.crmodders.cosmicloom.extention.LoomGradleExtension.getCosmicReach
 object Constants {
     const val GROUP = "io.github.startsmercury"
     const val MODID = "cr-tooltips-payak"
-    const val VERSION = "0.1.2"
+    const val VERSION = "0.1.3"
 
     const val DISPLAY_NAME = "CR Tooltips Payák"
 
