@@ -129,8 +129,8 @@ public class InGameMixin extends GameState implements InGameExtension {
     @Inject(
         method = "update(F)V",
         at = @At(
-            value = "FIELD",
-            target = "Lfinalforeach/cosmicreach/world/World;currentWorldTick:J",
+            value = "INVOKE",
+            target = "Lfinalforeach/cosmicreach/gamestates/InGame;updateHotbarColor(F)V",
             ordinal = 0
         )
     )
