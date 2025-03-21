@@ -6,11 +6,11 @@
     "mixins": [],
     "client": [
         "InGameMixin",
-        "ItemCatalogMixin",
         "ItemEntityMixin",
+        "ItemStackWidgetMixin",
         "UIMixin"
     ],
     "injectors": {
-    "defaultRequire": 1
+        "defaultRequire": 1
     }
 }

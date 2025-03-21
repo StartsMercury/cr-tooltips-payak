@@ -9,10 +9,10 @@ public interface InGameExtension {
      *
      * @param text the text to display
      */
-    void commitTooltip(String text);
+    void cr_tooltips_payak$commitTooltip(String text);
 
     /**
      * Immediately hide shown tooltip.
      */
-    void hideTooltip();
+    void cr_tooltips_payak$hideTooltip();
 }

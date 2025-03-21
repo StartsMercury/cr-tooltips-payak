@@ -56,12 +56,12 @@ public class ItemEntityMixin {
             final var name = itemStack.getName();
 
             if (name != null) {
-                ((InGameExtension) InGame.IN_GAME).commitTooltip(name);
+                ((InGameExtension) InGame.IN_GAME).cr_tooltips_payak$commitTooltip(name);
                 return true;
             }
         }
 
-        ((InGameExtension) InGame.IN_GAME).hideTooltip();
+        ((InGameExtension) InGame.IN_GAME).cr_tooltips_payak$hideTooltip();
 
         return true;
     }
