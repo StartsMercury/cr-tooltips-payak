@@ -10,7 +10,7 @@ import finalforeach.cosmicreach.items.screens.ItemStorageScreen;
 import finalforeach.cosmicreach.ui.FontRenderer;
 import finalforeach.cosmicreach.ui.GameStyles;
 import finalforeach.cosmicreach.ui.UI;
-import finalforeach.cosmicreach.ui.widgets.ItemCatalogWidget;
+import finalforeach.cosmicreach.ui.widgets.CreativeCatalogWidget;
 import finalforeach.cosmicreach.ui.widgets.ItemStackWidget;
 import io.github.startsmercury.cr_tooltips_payak.impl.client.InGameExtension;
 import org.spongepowered.asm.mixin.Mixin;
@@ -43,7 +43,7 @@ public class InGameMixin extends GameState implements InGameExtension {
     private Vector2 tmpVec;
 
     @Shadow
-    public ItemCatalogWidget itemCatalogWidget;
+    public CreativeCatalogWidget itemCatalogWidget;
 
     @Unique
     private float tooltipRemainingSeconds;
