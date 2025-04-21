@@ -4,7 +4,7 @@ import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalBooleanRef;
 import finalforeach.cosmicreach.gamestates.GameState;
-import finalforeach.cosmicreach.items.Hotbar;
+import finalforeach.cosmicreach.ui.Hotbar;
 import finalforeach.cosmicreach.ui.UI;
 import io.github.startsmercury.cr_tooltips_payak.impl.client.InGameExtension;
 import org.spongepowered.asm.mixin.Mixin;
@@ -22,10 +22,10 @@ public class UIMixin {
     @Inject(
         method = "render()V",
         at = {
-            @At(value = "INVOKE", target = "Lfinalforeach/cosmicreach/items/Hotbar;scrolled(FF)Z"),
+            @At(value = "INVOKE", target = "Lfinalforeach/cosmicreach/ui/Hotbar;scrolled(FF)Z"),
             @At(
                 value = "INVOKE",
-                target = "Lfinalforeach/cosmicreach/items/Hotbar;cycleSwapGroupItem()V"
+                target = "Lfinalforeach/cosmicreach/ui/Hotbar;cycleSwapGroupItem()V"
             ),
         }
     )

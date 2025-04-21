@@ -5,10 +5,10 @@
     "compatibilityLevel": "JAVA_17",
     "mixins": [],
     "client": [
-        "CraftingScreenMixin",
+        "FollowMouseActionMixin",
         "InGameMixin",
+        "ItemCatalogWidgetMixin",
         "ItemEntityMixin",
-        "ItemStackWidgetMixin",
         "UIMixin"
     ],
     "injectors": {
